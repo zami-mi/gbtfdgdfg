@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pago - PureBottle</title>
+    <link rel="stylesheet" href="../style/pago.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <a href="../index.html">
+            <h1>PureBottle</h1>
+        </a>
+    </div>
+    <nav>
+        <li><a href="../index.html">INICIO</a></li>
+        <li><a href="historia.html">HISTORIA</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="contactanos.html">CONTACTANOS</a></li>
+    </nav>
+    <div class="acciones">
+        <div class="carrito">
+            <a href="./carrito.html">
+                <img src="../img/carritoCompras.png" alt="Carrito">
+            </a>
+        </div>
+
+        <div class="register">
+            <a href="./register.html">Registrarse</a>
+        </div>
+    </div>
+    </header>
+    <main>
+        <h2>Formulario de pago y envío</h2>
+
+        <section class="resumen-compra">
+            <h3>Resumen de tu compra:</h3>
+            <div id="resumen-items"></div>
+            <p>Total: <span id="total-pago">0 ARS</span></p>
+        </section>
+
+        <section class="formulario-pago">
+            <h3>Datos de envío</h3>
+            <form id="formPago">
+                <label>Nombre completo:
+                    <input type="text" name="nombre" required>
+                </label>
+                <label>Dirección:
+                    <input type="text" name="direccion" required>
+                </label>
+                <label>Ciudad:
+                    <input type="text" name="ciudad" required>
+                </label>
+
+                <h3>Datos de tarjeta</h3>
+                <label>Nombre en tarjeta:
+                    <input type="text" name="nombreTarjeta" required>
+                </label>
+                <label>Número de tarjeta:
+                    <input type="text" name="numTarjeta" maxlength="16" required>
+                </label>
+                <label>Vencimiento:
+                    <input type="month" name="vencimiento" required>
+                </label>
+                <label>CVV:
+                    <input type="text" name="cvv" maxlength="3" required>
+                </label>
+
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../javascript/pago.js"></script>
+</body>
+</html>
